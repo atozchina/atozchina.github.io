@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -18,7 +18,7 @@
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .newsletter-container {
             max-width: 800px;
             margin: 0 auto;
@@ -27,15 +27,15 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
-            padding: 25px 20px;
+            padding: 40px 30px;
             text-align: center;
             position: relative;
         }
-        
+
         .header::before {
             content: '';
             position: absolute;
@@ -46,7 +46,7 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="40%"><stop offset="0%" stop-opacity=".5"/><stop offset="100%" stop-opacity="0"/></radialGradient></defs><circle fill="url(%23a)" cx="50" cy="10" r="10"/></svg>') repeat-x;
             opacity: 0.1;
         }
-        
+
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
@@ -54,18 +54,18 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .header .date {
             font-size: 1.1em;
             opacity: 0.9;
             position: relative;
             z-index: 1;
         }
-        
+
         .content {
             padding: 40px 30px;
         }
-        
+
         .section {
             margin-bottom: 35px;
             padding: 25px;
@@ -74,12 +74,12 @@
             border-left: 5px solid #4facfe;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .section:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        
+
         .section-title {
             display: flex;
             align-items: center;
@@ -88,7 +88,7 @@
             font-weight: 600;
             color: #2c3e50;
         }
-        
+
         .section-icon {
             width: 24px;
             height: 24px;
@@ -101,12 +101,12 @@
             color: white;
             font-weight: bold;
         }
-        
+
         .section-content {
             color: #444;
             line-height: 1.7;
         }
-        
+
         .highlight {
             background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
             padding: 3px 8px;
@@ -114,7 +114,7 @@
             font-weight: 600;
             color: #2c3e50;
         }
-        
+
         .amount {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -125,7 +125,7 @@
             display: inline-block;
             margin: 10px 0;
         }
-        
+
         .urgent {
             background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
             color: white;
@@ -136,13 +136,13 @@
             font-weight: 600;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
             70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
         }
-        
+
         .info-box {
             background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
             color: white;
@@ -151,48 +151,48 @@
             margin: 15px 0;
             text-align: center;
         }
-        
+
         .info-box strong {
             font-size: 1.2em;
             display: block;
             margin-bottom: 8px;
         }
-        
+
         .footer {
             background: #2c3e50;
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
+
         .footer h3 {
             margin-bottom: 15px;
             color: #74b9ff;
         }
-        
+
         .contact-info {
             font-size: 0.95em;
             opacity: 0.9;
         }
-        
+
         @media (max-width: 600px) {
             .newsletter-container {
                 margin: 10px;
                 border-radius: 15px;
             }
-            
+
             .header {
                 padding: 25px 20px;
             }
-            
+
             .header h1 {
                 font-size: 2em;
             }
-            
+
             .content {
                 padding: 25px 20px;
             }
-            
+
             .section {
                 padding: 20px;
                 margin-bottom: 25px;
@@ -203,10 +203,10 @@
 <body>
     <div class="newsletter-container">
         <div class="header">
-            <h1>25년 6월 나사렛 뉴스레터</h1>
+            <h1>나사렛 뉴스레터</h1>
             <div class="date">2025년 6월</div>
         </div>
-        
+
         <div class="content">
             <div class="section">
                 <div class="section-title">
@@ -222,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="section">
                 <div class="section-title">
                     <div class="section-icon">💝</div>
@@ -236,15 +236,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="section">
                 <div class="section-title">
                     <div class="section-icon">🏕️</div>
                     여름 수련회 특별 모금
                 </div>
                 <div class="section-content">
-                    작년과 동일하게 여름 수련회 후원을 위한 특별 모금을 진행합니다.<br><br>
-                    <strong>모금 구조:</strong><br>
+                    작년과 동일하게 여름 수련회 후원을 위한 특별 모금을 진행합니다.<br>
+                    <span class="highlight">7979-81-87739 카카오뱅크 양헌철</span><br><br>
+                    <strong>모금 내역:</strong><br>
                     • 간사님이 올리신 비용 + 간식 비용 지출<br>
                     • 남은 금액은 나사렛 재정으로 활용<br><br>
                     <div class="info-box">
@@ -252,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="section">
                 <div class="section-title">
                     <div class="section-icon">💬</div>
@@ -260,12 +261,12 @@
                 </div>
                 <div class="section-content">
                     카톡방을 통해 캠퍼스 소식, 기도제목, 나사렛들의 소식이 공유되고 있습니다.<br>
-                    이에 따라 <span class="highlight">카톡방 참여자를 단대 CCC 활동회원으로 확인</span>하려고 합니다.<br><br>
+                    이에 따라 <span class="highlight">카톡방 참여자를 단대 CCC 나사렛 활동회원으로 확인</span>하려고 합니다.<br><br>
                     <strong>🙏 부탁드리는 일:</strong><br>
                     주변에 카톡방에 참여하지 않은 나사렛들이 있다면 적극 권면하여 초대해 주세요!
                 </div>
             </div>
-            
+
             <div class="section">
                 <div class="section-title">
                     <div class="section-icon">💰</div>
@@ -274,7 +275,7 @@
                 <div class="section-content">
                     <strong>현재 통장 잔액</strong><br>
                     <div class="amount">1,552,890원</div>
-                    
+
                     <strong>통장 관리 현황:</strong><br>
                     • 회장 명의 카카오뱅크 모임통장으로 운영<br>
                     • 총무: 이은영 간사님<br>
@@ -282,7 +283,7 @@
                     함께 투명하게 관리하고 있습니다. 💙
                 </div>
             </div>
-            
+
             <div class="section">
                 <div class="section-title">
                     <div class="section-icon">📢</div>
@@ -296,7 +297,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer">
             <h3>함께 걸어가는 나사렛</h3>
             <div class="contact-info">
