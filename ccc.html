@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나사렛 뉴스레터</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="40%"><stop offset="0%" stop-opacity=".5"/><stop offset="100%" stop-opacity="0"/></radialGradient></defs><circle fill="url(%23a)" cx="50" cy="10" r="10"/></svg>') repeat-x;
+            opacity: 0.1;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header .date {
+            font-size: 1.1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 15px;
+            background: #f8f9ff;
+            border-left: 5px solid #4facfe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            background: #4facfe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .section-content {
+            color: #444;
+            line-height: 1.7;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .amount {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .urgent {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .info-box strong {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer h3 {
+            margin-bottom: 15px;
+            color: #74b9ff;
+        }
+        
+        .contact-info {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 600px) {
+            .newsletter-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .section {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="newsletter-container">
+        <div class="header">
+            <h1>나사렛 뉴스레터</h1>
+            <div class="date">2025년 6월</div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="section-title">
+                    <div class="section-icon">1</div>
+                    임원 연임 관련 결정 사항
+                </div>
+                <div class="section-content">
+                    <span class="highlight">25년 캠퍼스 홈커밍 데이</span> 회의를 통해 중요한 결정이 내려졌습니다.<br>
+                    임원의 2년 임기가 만료되는 경우, 연임은 <strong>1년 단위</strong>로 진행하기로 결정되었습니다.<br><br>
+                    <div class="info-box">
+                        <strong>📅 다음 임원 선출 일정</strong>
+                        26년 홈커밍 데이에서 임원 선출 진행 예정
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">
+                    <div class="section-icon">💝</div>
+                    나사렛 후원 현황
+                </div>
+                <div class="section-content">
+                    현재 나사렛은 <strong>수입보다 지출이 많은 상황</strong>입니다.<br>
+                    <div class="urgent">
+                        🙏 정기적인 후원이 간절히 필요한 상태입니다<br>
+                        많은 관심과 참여 부탁드립니다!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">
+                    <div class="section-icon">🏕️</div>
+                    여름 수련회 특별 모금
+                </div>
+                <div class="section-content">
+                    작년과 동일하게 여름 수련회 후원을 위한 특별 모금을 진행합니다.<br><br>
+                    <strong>모금 구조:</strong><br>
+                    • 간사님이 올리신 비용 + 간식 비용 지출<br>
+                    • 남은 금액은 나사렛 재정으로 활용<br><br>
+                    <div class="info-box">
+                        함께 만드는 은혜로운 여름 수련회! 🌟
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">
+                    <div class="section-icon">💬</div>
+                    카톡방 회원 확인 안내
+                </div>
+                <div class="section-content">
+                    카톡방을 통해 캠퍼스 소식, 기도제목, 나사렛들의 소식이 공유되고 있습니다.<br>
+                    이에 따라 <span class="highlight">카톡방 참여자를 단대 CCC 활동회원으로 확인</span>하려고 합니다.<br><br>
+                    <strong>🙏 부탁드리는 일:</strong><br>
+                    주변에 카톡방에 참여하지 않은 나사렛들이 있다면 적극 권면하여 초대해 주세요!
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">
+                    <div class="section-icon">💰</div>
+                    나사렛 재정 현황
+                </div>
+                <div class="section-content">
+                    <strong>현재 통장 잔액</strong><br>
+                    <div class="amount">1,552,890원</div>
+                    
+                    <strong>통장 관리 현황:</strong><br>
+                    • 회장 명의 카카오뱅크 모임통장으로 운영<br>
+                    • 총무: 이은영 간사님<br>
+                    • 회계: 김유정 순장님<br>
+                    함께 투명하게 관리하고 있습니다. 💙
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">
+                    <div class="section-icon">📢</div>
+                    나사렛 운영 의견 수렴
+                </div>
+                <div class="section-content">
+                    나사렛 운영에 대한 의견이나 제안사항이 있으시면 <strong>언제든지</strong> 말씀해 주세요!<br><br>
+                    <div class="info-box">
+                        함께 만들어가는 나사렛 공동체 ✨
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>함께 걸어가는 나사렛</h3>
+            <div class="contact-info">
+                궁금한 사항이나 의견이 있으시면 언제든 연락주세요<br>
+                하나님의 은혜가 함께 하시길 기도합니다 🙏
+            </div>
+        </div>
+    </div>
+</body>
+</html>
